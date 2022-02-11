@@ -16,13 +16,7 @@ export interface ScannerFlashPlugin {
   // check flashlight state
   isSwitchedOn(): Promise<{ value: boolean; }>;
 
-
-}
-// end of flash-light methods....
-
-// start scanner methods....
-
-export interface BarcodeScannerPlugin {
+  // start scanner methods....
   prepare(): Promise<void>;
   hideBackground(): Promise<void>;
   showBackground(): Promise<void>;
@@ -32,7 +26,16 @@ export interface BarcodeScannerPlugin {
     options: CheckPermissionOptions,
   ): Promise<CheckPermissionResult>;
   openAppSettings(): Promise<void>;
+
+
 }
+// end of flash-light methods....
+
+// start scanner methods....
+
+// export interface BarcodeScannerPlugin {
+
+// }
 
 export interface ScanResult {
   hasContent: boolean;

@@ -18,6 +18,14 @@ npx cap sync
 * [`switchOn(...)`](#switchon)
 * [`switchOff()`](#switchoff)
 * [`isSwitchedOn()`](#isswitchedon)
+* [`prepare()`](#prepare)
+* [`hideBackground()`](#hidebackground)
+* [`showBackground()`](#showbackground)
+* [`startScan()`](#startscan)
+* [`stopScan()`](#stopscan)
+* [`checkPermission(...)`](#checkpermission)
+* [`openAppSettings()`](#openappsettings)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -81,5 +89,106 @@ isSwitchedOn() => Promise<{ value: boolean; }>
 **Returns:** <code>Promise&lt;{ value: boolean; }&gt;</code>
 
 --------------------
+
+
+### prepare()
+
+```typescript
+prepare() => Promise<void>
+```
+
+--------------------
+
+
+### hideBackground()
+
+```typescript
+hideBackground() => Promise<void>
+```
+
+--------------------
+
+
+### showBackground()
+
+```typescript
+showBackground() => Promise<void>
+```
+
+--------------------
+
+
+### startScan()
+
+```typescript
+startScan() => Promise<ScanResult>
+```
+
+**Returns:** <code>Promise&lt;<a href="#scanresult">ScanResult</a>&gt;</code>
+
+--------------------
+
+
+### stopScan()
+
+```typescript
+stopScan() => Promise<void>
+```
+
+--------------------
+
+
+### checkPermission(...)
+
+```typescript
+checkPermission(options: CheckPermissionOptions) => Promise<CheckPermissionResult>
+```
+
+| Param         | Type                                                                      |
+| ------------- | ------------------------------------------------------------------------- |
+| **`options`** | <code><a href="#checkpermissionoptions">CheckPermissionOptions</a></code> |
+
+**Returns:** <code>Promise&lt;<a href="#checkpermissionresult">CheckPermissionResult</a>&gt;</code>
+
+--------------------
+
+
+### openAppSettings()
+
+```typescript
+openAppSettings() => Promise<void>
+```
+
+--------------------
+
+
+### Interfaces
+
+
+#### ScanResult
+
+| Prop             | Type                 |
+| ---------------- | -------------------- |
+| **`hasContent`** | <code>boolean</code> |
+| **`content`**    | <code>string</code>  |
+
+
+#### CheckPermissionResult
+
+| Prop             | Type                 |
+| ---------------- | -------------------- |
+| **`granted`**    | <code>boolean</code> |
+| **`denied`**     | <code>boolean</code> |
+| **`asked`**      | <code>boolean</code> |
+| **`neverAsked`** | <code>boolean</code> |
+| **`restricted`** | <code>boolean</code> |
+| **`unknown`**    | <code>boolean</code> |
+
+
+#### CheckPermissionOptions
+
+| Prop        | Type                 |
+| ----------- | -------------------- |
+| **`force`** | <code>boolean</code> |
 
 </docgen-api>

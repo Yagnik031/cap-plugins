@@ -1,9 +1,9 @@
 import { WebPlugin } from '@capacitor/core';
-import { BarcodeScannerPlugin, CheckPermissionOptions, CheckPermissionResult, ScanResult } from './definitions';
+import { CheckPermissionOptions, CheckPermissionResult, ScanResult } from './definitions';
 
 import type { ScannerFlashPlugin } from './definitions';
 
-export class ScannerFlashWeb extends WebPlugin implements ScannerFlashPlugin, BarcodeScannerPlugin {
+export class ScannerFlashWeb extends WebPlugin implements ScannerFlashPlugin {
   async prepare(): Promise<void> {
     throw new Error('Method not implemented.');
   }
