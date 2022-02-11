@@ -1,5 +1,5 @@
 {
-  "name": "scanner",
+  "name": "yagnik-scanner",
   "version": "0.0.1",
   "description": "this plugin is combo of flash-light && scanner",
   "main": "dist/plugin.cjs.js",
